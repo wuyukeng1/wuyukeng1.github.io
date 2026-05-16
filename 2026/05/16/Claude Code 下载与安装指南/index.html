@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Claude Code 下载与安装指 | 且听风吟</title><meta name="author" content="wuyukeng1"><meta name="copyright" content="wuyukeng1"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Claude Code 下载与安装指南前提条件 1. 安装 Node.js（版本 ≥ 18）Windows &#x2F; macOS 直接前往( Node.js 官网) ，点击获取node.js 选择x64，点击windows安装程序，下载好后一路点击安装程序后，点击next直至安装完毕 接着按win键搜索cmd，打开命令提示符，输入： 1node -v  出现版本号代表安装完毕（如下）  顺便设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Code 下载与安装指">
+<meta property="og:url" content="https://wuyukeng1.github.io/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="且听风吟">
+<meta property="og:description" content="Claude Code 下载与安装指南前提条件 1. 安装 Node.js（版本 ≥ 18）Windows &#x2F; macOS 直接前往( Node.js 官网) ，点击获取node.js 选择x64，点击windows安装程序，下载好后一路点击安装程序后，点击next直至安装完毕 接着按win键搜索cmd，打开命令提示符，输入： 1node -v  出现版本号代表安装完毕（如下）  顺便设">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wuyukeng1.github.io/img/niru.png">
+<meta property="article:published_time" content="2026-05-16T03:16:35.470Z">
+<meta property="article:modified_time" content="2026-05-16T08:07:25.412Z">
+<meta property="article:author" content="wuyukeng1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wuyukeng1.github.io/img/niru.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Claude Code 下载与安装指",
+  "url": "https://wuyukeng1.github.io/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/",
+  "image": "https://wuyukeng1.github.io/img/niru.png",
+  "datePublished": "2026-05-16T03:16:35.470Z",
+  "dateModified": "2026-05-16T08:07:25.412Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "wuyukeng1",
+      "url": "https://wuyukeng1.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://wuyukeng1.github.io/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Claude Code 下载与安装指',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div class="bg-animation" id="web_bg" style="background-image: url(/img/anime_bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/niru.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/Link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/bg_tech_anime.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">且听风吟</span></a><a class="nav-page-title" href="/"><span class="site-name">Claude Code 下载与安装指</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/Link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Claude Code 下载与安装指</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-16T03:16:35.470Z" title="发表于 2026-05-16 11:16:35">2026-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-16T08:07:25.412Z" title="更新于 2026-05-16 16:07:25">2026-05-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2026-05-16 16:07:25&quot;}" hidden></div><h2 id="Claude-Code-下载与安装指南"><a href="#Claude-Code-下载与安装指南" class="headerlink" title="Claude Code 下载与安装指南"></a>Claude Code 下载与安装指南</h2><h3 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h3><ul>
+<li><h3 id="1-安装-Node-js（版本-≥-18）"><a href="#1-安装-Node-js（版本-≥-18）" class="headerlink" title="1. 安装 Node.js（版本 ≥ 18）"></a>1. 安装 Node.js（版本 ≥ 18）</h3><p><strong>Windows &#x2F; macOS</strong><br> 直接前往( <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js 官网</a>) ，点击获取node.js<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514224726430.png" alt="image-20260514224726430"></p>
+<p>选择x64，点击windows安装程序，下载好后一路点击安装程序后，点击next直至安装完毕</p>
+<p>接着按win键搜索cmd，打开命令提示符，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号代表安装完毕（如下）</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514225114166.png" alt="image-20260514225114166"></p>
+<p>顺便设置一下国内镜像源，不然接下来可能安装失败，在命令提示符中输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
+
+<p>回车后安装</p>
+<h3 id="2-安装-Git（推荐）"><a href="#2-安装-Git（推荐）" class="headerlink" title="2. 安装 Git（推荐）"></a>2. 安装 Git（推荐）</h3><p>Claude Code 的文件操作和提交功能依赖 Git。<br> <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git 官网下载</a> 并安装</p>
+<p>或者在浏览器中搜索git，点击进入官网，移动到底端找到在windows上安装，打开(<a target="_blank" rel="noopener" href="https://git-scm.com/install/windows">https://git-scm.com/install/windows</a>)</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514225649965.png" alt="image-20260514225649965"></p>
+<p>打开后选择x64 setup</p>
+<p>之后安装步骤按照node.js来</p>
+<p>完成后打开终端&#x2F;命令提示符验证：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bash</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>成功则会显示版本号</p>
+<h3 id="3-安装claude-code"><a href="#3-安装claude-code" class="headerlink" title="3.安装claude code"></a>3.安装claude code</h3><p>打开命令行（按win搜索cmd），输入以下代码安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure>
+
+<p>接着输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude --version</span><br></pre></td></tr></table></figure>
+
+<p>回车检验是否生效</p>
+<p>接着再输入claude并按回车，出现以下图片则说明成功</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514230430170.png" alt="image-20260514230430170"></p>
+<p>接着我们要修改一下配置文件方便你登录claude code</p>
+<p>打开资源管理器，在管理栏中输入你的用户名（即你电脑启动时要你登录时候显示的名字），并按下回车，此时如果你没有打开隐藏文件夹时候是看不到我们要修改的文件的，找到上方排序那栏的查看，点击后在点击下端的显示，最后再点击隐藏的项目，如果隐藏的项目前面打勾则说明成功</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514231012892.png" alt="image-20260514231012892"></p>
+<p>最后以txt格式打开.claude.json文件，先在这行后面加上一个英文逗号，注意，一定要将输入法切换为英文确保打出来的逗号是英文逗号</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514231255723.png" alt="image-20260514231255723"></p>
+<p>然后在下一行加上  “hasCompletedOnboarding”: true   以确保最后两行类似以下图片</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514231430323.png" alt="image-20260514231430323"></p>
+<p>最后保存再关闭</p>
+<p>接着回到命令提示符中，再次输入claude，他会让你选择是否相信该文件夹，按1选择相信就可以了</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514231728253.png" alt="image-20260514231728253"></p>
+<h3 id="4-配置环境变量（持久化密钥）（可选）"><a href="#4-配置环境变量（持久化密钥）（可选）" class="headerlink" title="4. 配置环境变量（持久化密钥）（可选）"></a>4. 配置环境变量（持久化密钥）（可选）</h3><p>将以下命令写入 shell 配置文件（macOS&#x2F;Linux 为 <code>~/.bashrc</code> 或 <code>~/.zshrc</code>，Windows 建议在系统环境变量中添加）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bash</span><br><span class="line">export ANTHROPIC_API_KEY=你的密钥</span><br></pre></td></tr></table></figure>
+
+<p>生效配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bash</span><br><span class="line">source ~/.bashrc   # 或 source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-下载cc-switch"><a href="#5-下载cc-switch" class="headerlink" title="5.下载cc-switch"></a>5.下载cc-switch</h3><p>因为种种原因（其实是学生党用不起claude），这边推荐大家可以选择接入deepseekv4pro来使用claude code（其实是claude太贵了），因此我们可以先打开github（进不去的可以下个watt toolkit)，搜索cc-switch，选择这个作者</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232139325.png" alt="image-20260514232139325"></p>
+<p>下滑找到releases，点击+37 releases</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232319704.png" alt="image-20260514232319704"></p>
+</li>
+</ul>
+<p>​        选择以.msi结尾的安装包（英雄联盟季中赛这一块）</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232416621.png" alt="image-20260514232416621"></p>
+<p>​	一路下一步安装完成即可</p>
+<p>​	接着打开cc switch,点击右上角橙色加号</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232516980.png" alt="image-20260514232516980"></p>
+<p>​	选择deepseek，并填写自己的api key</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232612499.png" alt="image-20260514232612499"></p>
+<p>​	并将默认模型改成以下的模型，注意要加上[1m]，以达成1m的上下文长度</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\19854\AppData\Roaming\Typora\typora-user-images\image-20260514232705884.png" alt="image-20260514232705884"></p>
+<p>​	然后点击右下角添加即可，别忘了回到主界面选择deepseek</p>
+<h3 id="6-skill推荐（可看"><a href="#6-skill推荐（可看" class="headerlink" title="6.skill推荐（可看"></a>6.skill推荐（可看</h3><p>​        最后再推荐几个好用的skill给大家</p>
+<p>​	首先是mattpocock大神的skill，其中grillme很好用，能让你的ai不断追问你以完善你的需求</p>
+<p>​	然后是claude-hud：一个可以在窗口下方实时查看上下文额度、剩余调用量等信息的插件</p>
+<p>​	接着是claude官方推出的skill-creator：一个帮你规范化生成自定义Skill的Skill，可以针对不	    	同目标帮你写出不同skill，如ppt制作的skill可以让它帮你写</p>
+<p>​	最后是nternal-comms 可以进行状态报告</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wuyukeng1.github.io">wuyukeng1</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wuyukeng1.github.io/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/">https://wuyukeng1.github.io/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wuyukeng1.github.io" target="_blank">且听风吟</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/niru.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/16/Java+SpringBoot%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E5%90%88%E4%B8%80/" title="Java+SpringBoot核心知识点整合一"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Java+SpringBoot核心知识点整合一</div></div><div class="info-2"><div class="info-item-1">Java+SpringBoot核心知识点整合一一、HTTP请求方式   请求方式 用途 特点    GET 查询数据 参数拼接在URL后，安全性差   POST 新增数据 参数放在请求体中   PUT 全量修改 替换整个资源   PATCH 局部修改 修改部分字段   DELETE 删除数据 无   注：HEAD、OPTIONS、CONNECT、TRACE在实际开发中极少使用，了解即可。 二、@符号的语义区分核心规则：  顶格书写 &#x3D; 注解：如@RestController、@Service、@Mapper、@Select 写在引号内 &#x3D; 路径&#x2F;变量：如@GetMapping(&quot;/user/{id}&quot;)中的/user/{id}  判断方法：看该符号是否出现在字符串字面量内部。 三、MyBatis核心知识点@Mapper 作用：标记Mapper接口，MyBatis自动生成实现类 效果：开发者无需手写数据库操作的实现代码  @Select &#x2F; @Insert &#x2F; @Update &#x2F; @Delete 作用：...</div></div></div></a><a class="pagination-related" href="/2026/04/22/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Hello World</div></div><div class="info-2"><div class="info-item-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/niru.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wuyukeng1</div><div class="author-info-description">懒</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wuyukeng1" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wuyuekeng111@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Ciallo～(∠・ω< )⌒★</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Claude-Code-%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97"><span class="toc-number">1.</span> <span class="toc-text">Claude Code 下载与安装指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Node-js%EF%BC%88%E7%89%88%E6%9C%AC-%E2%89%A5-18%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">1. 安装 Node.js（版本 ≥ 18）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85-Git%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">2. 安装 Git（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85claude-code"><span class="toc-number">1.4.</span> <span class="toc-text">3.安装claude code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88%E6%8C%81%E4%B9%85%E5%8C%96%E5%AF%86%E9%92%A5%EF%BC%89%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">4. 配置环境变量（持久化密钥）（可选）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%B8%8B%E8%BD%BDcc-switch"><span class="toc-number">1.6.</span> <span class="toc-text">5.下载cc-switch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-skill%E6%8E%A8%E8%8D%90%EF%BC%88%E5%8F%AF%E7%9C%8B"><span class="toc-number">1.7.</span> <span class="toc-text">6.skill推荐（可看</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/16/LangChain%EF%BC%9A%E8%AE%A9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%8F%98%E5%BE%97%E6%9B%B4%E7%AE%80%E5%8D%95/" title="LangChain：让大模型应用开发变得更简单">LangChain：让大模型应用开发变得更简单</a><time datetime="2026-05-16T05:16:41.841Z" title="发表于 2026-05-16 13:16:41">2026-05-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/16/Java+SpringBoot%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E5%90%88%E4%B8%80/" title="Java+SpringBoot核心知识点整合一">Java+SpringBoot核心知识点整合一</a><time datetime="2026-05-16T03:16:35.474Z" title="发表于 2026-05-16 11:16:35">2026-05-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/16/Claude%20Code%20%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" title="Claude Code 下载与安装指">Claude Code 下载与安装指</a><time datetime="2026-05-16T03:16:35.470Z" title="发表于 2026-05-16 11:16:35">2026-05-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/22/hello-world/" title="Hello World">Hello World</a><time datetime="2026-04-22T14:35:46.016Z" title="发表于 2026-04-22 22:35:46">2026-04-22</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/bg_tech_anime.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wuyukeng1</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: '',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,200,255" opacity="0.5" zIndex="-1" count="66" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="键入关键词搜索文章..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
